@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  myPostgresDb:
+    image: postgres:12-alpine3.18
+    ports:
+      - '5455:5432'
+    volumes:
+      - ./data:/var/lib/postgres
+    environment:
+      POSTGRES_PASSWORD: Qwerty1234
+      POSTGRES_USER: testUser
+      POSTGRES_DB: PostgresDb
+
